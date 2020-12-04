@@ -41,7 +41,7 @@ year = 1991;
 console.log(typeof year);
 
 console.log(typeof null);
-*/
+
 
 // Var, let and const
 let age = 30;
@@ -54,3 +54,45 @@ job = 'teacher';
 
 lastName = 'Sullivan';
 console.log(lastName);
+
+
+//Basic Operators
+const now = 2037;
+const ageEogan = now - 1993;
+const ageSarah = now - 2020;
+console.log(ageEogan, ageSarah);
+
+console.log(ageEogan * 2, ageEogan / 10, 2 ** 3);
+// 2 ** 3 means 2 cubed
+
+const firstName = 'Eógan';
+const lastName = 'Sullivan';
+console.log(firstName + ' ' + lastName);
+
+// Assignment Operators
+let x = 10 + 5; // 15
+x += 10; // x = x+10 = 25
+x *= 4; // x= x*4 or 100
+x++; // x= x+1;
+x--; // x= x-1;
+console.log(x);
+
+// Comparison operators
+console.log(ageEogan > ageSarah); // >, <, >=, <=
+console.log(ageSarah >= 18);
+const isFullAge = ageSarah >= 18;
+
+
+console.log(now - 1991 > now - 2018);
+*/
+
+const now = 2037;
+const ageEogan = now - 1993;
+const ageSarah = now - 2018;
+
+let x, y;
+x = y = 25 - 10 - 5; // x = y = 10, x=10,y=10
+console.log(x, y);
+
+const averageAge = (ageEogan + ageSarah) / 2;
+console.log(ageEogan, ageSarah, averageAge);
