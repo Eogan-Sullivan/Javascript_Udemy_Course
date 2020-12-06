@@ -117,7 +117,6 @@ lines');
 console.log(`String
 multiple
 lines`);
-*/
 
 const age = 15;
 
@@ -139,3 +138,4 @@ else {
     century = 21;
 }
 console.log(century);
+*/
