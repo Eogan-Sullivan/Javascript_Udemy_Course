@@ -232,7 +232,7 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 else {
     console.log("Someone else should drive...")
 }
-*/
+
 const day = 'thursday';
 
 switch (day) {
@@ -266,6 +266,18 @@ else if (day === 'wednesday' || day === 'thursday') console.log('Write code exam
 else if (day === 'friday') console.log('Record videos');
 else if (day === 'saturday' || day === 'sunday') console.log('Enjoy the weekend :D');
 else console.log('Not a Valid Day');
+*/
 
+const age = 23;
+age >= 18 ? console.log('I like to drink wine 🍷') : console.log('I like to drink water 💧');
 
+const drink = age >= 18 ? 'wine 🍷' : 'water 💧💧';
+console.log(drink);
+
+let drink2;
+if (age >= 18) drink2 = 'wine 🍷';
+else drink2 = 'water 💧💧';
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 💧💧'}`);
 
