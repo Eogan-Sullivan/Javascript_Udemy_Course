@@ -157,7 +157,7 @@ console.log('23' > '18');
 let n = '1' + 1; // String 11
 n = n - 1;
 console.log(n);
-*/
+
 // 5 Falsy Values 0,'', undefined, null, NaN
 
 console.log(Boolean(0));
@@ -180,4 +180,35 @@ if (height) {
 } else {
     console.log('Heigh is Undefined');
 }
+*/
+
+const age = '18';
+// === Strict == Loose, strict does not do type coersion, loose does.
+if (age === 18) console.log("You just became an adult! (strict)");
+
+if (age == 18) console.log("You just became an adult! (loose)");
+
+const favourite = Number(prompt("What's your favourite number?"));
+
+console.log(favourite);
+console.log(typeof (favourite));
+
+if (favourite === 23) {
+    console.log(`Cool 23 is an amazing number`);
+} else if (favourite === 7) {
+    console.log(`7 is also a cool number`);
+} else if (favourite === 9) {
+    console.log(`9 is also a cool number`);
+}
+else {
+    console.log(`Number is not 7,9 or 23`);
+}
+
+//!== strict != loose
+if (favourite !== 23) {
+    console.log(`why not 23?`)
+}
+
+
+
 
