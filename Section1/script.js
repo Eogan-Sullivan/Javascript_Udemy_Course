@@ -138,4 +138,46 @@ else {
     century = 21;
 }
 console.log(century);
+
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear)
+console.log(Number(inputYear) + 18);
+
+console.log(Number("Eogan")); // Returns NaN "Not a Number"
+console.log(typeof (NaN));
+
+console.log(String(99), 99);
+
+//type coercion
+console.log('I am' + 26 + 'years old');
+console.log('23' - '10' - 3);
+console.log('23' * '2');
+console.log('23' > '18');
+
+let n = '1' + 1; // String 11
+n = n - 1;
+console.log(n);
 */
+// 5 Falsy Values 0,'', undefined, null, NaN
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Eogan'));
+console.log(Boolean({}));
+console.log(Boolean(''));
+
+const money = 100;
+if (money) {
+    console.log("Dont spend it all!");
+}
+else {
+    console.log("You should get a job!");
+}
+
+let height = 123;
+if (height) {
+    console.log('Yay! Height is defined');
+} else {
+    console.log('Heigh is Undefined');
+}
+

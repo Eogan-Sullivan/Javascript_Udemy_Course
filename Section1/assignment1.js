@@ -20,6 +20,4 @@ population++;
 console.log(population);
 console.log(population > 33);
 
-
-
 language = 'English';
