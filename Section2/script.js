@@ -181,3 +181,31 @@ const eogan = {
 };
 
 console.log(eogan);
+
+console.log(eogan.lastName);
+console.log(eogan['lastName,me']);
+
+const nameKey = 'Name';
+console.log(eogan['first' + nameKey]);
+console.log(eogan['last' + nameKey]);
+
+// console.log(eogan.'last'+namKey)
+
+const interestedIn = prompt('What do you want to know about Eogan? Choose between firstName, lastName, age, job and friends');
+
+console.log(eogan[interestedIn]);
+
+if (eogan[interestedIn]) {
+    console.log(eogan[interestedIn]);
+} else {
+    console.log('wrong request! Choose between firstName, lastName, age, job and friends');
+}
+
+eogan.location = 'Portugal';
+eogan['twitter'] = '@SullivanEogan'
+console.log(eogan);
+
+// Challenge
+//"Jonas has 3 friends, and his best friend is called Micheal"
+
+console.log(`${eogan.firstName} has ${eogan.friends.length} friends and his best friend is called ${eogan.friends[0]}`);
