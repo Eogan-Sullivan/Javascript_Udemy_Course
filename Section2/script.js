@@ -163,7 +163,7 @@ console.log(friends.includes(23));
 if (friends.includes('Steven')) {
     console.log('You have a friends named Steven');
 }
-*/
+
 const eoganArray = [
     'Eogan',
     'Sullivan',
@@ -209,3 +209,33 @@ console.log(eogan);
 //"Jonas has 3 friends, and his best friend is called Micheal"
 
 console.log(`${eogan.firstName} has ${eogan.friends.length} friends and his best friend is called ${eogan.friends[0]}`);
+*/
+
+const eogan = {
+    firstName: 'Eógan',
+    lastName: 'Sullivan',
+    birthYear: 1993,
+    job: 'Student',
+    friends: ['Micheal', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+    // calcAge: function (birthYear) {
+    //     return 2037 - birthYear
+    // }
+    // calcAge: function () {
+    //     return 2037 - this.birthYear;
+    // }
+    calcAge: function () {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+    getSummary: function () {
+        return this.summary = `${this.firstName} is a ${this.age}-year old ${this.job} and he ${this.hasDriversLicense ? 'has' : 'doesnt have'} a drivers License`
+    }
+};
+
+console.log(eogan.calcAge());
+console.log(eogan.age);
+eogan.getSummary();
+console.log(eogan.summary);
+// console.log(eogan['calcAge'](1993));
+
