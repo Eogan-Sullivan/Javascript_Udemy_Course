@@ -133,7 +133,6 @@ const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2]), calcAge(y
 
 console.log(ages);
 
-*/
 
 const friends = ['Micheal', 'Steven', 'Peter'];
 
@@ -164,3 +163,21 @@ console.log(friends.includes(23));
 if (friends.includes('Steven')) {
     console.log('You have a friends named Steven');
 }
+*/
+const eoganArray = [
+    'Eogan',
+    'Sullivan',
+    2037 - 1993,
+    'student',
+    ['Micheal', 'Peter', 'Steven']
+]
+
+const eogan = {
+    firstName: 'Eógan',
+    lastName: 'Sullivan',
+    age: 2037 - 1993,
+    job: 'Student',
+    friends: ['Micheal', 'Peter', 'Steven']
+};
+
+console.log(eogan);
