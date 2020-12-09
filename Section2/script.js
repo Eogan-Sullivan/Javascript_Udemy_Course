@@ -12,7 +12,7 @@ if (hasDriversLicense) console.log(`I can drive`);
 
 function logger(){
     console.log(`My name is Eógan`);
-} 
+}
 
 // calling / running / invoking function
 logger();
@@ -45,7 +45,7 @@ const calcAge2 = function (birthYear){
 
 const age2 = calcAge2(1993);
 console.log(age2);
-*/
+
 
 
 //Arrow Function
@@ -62,3 +62,74 @@ const yearsUntilRetirement =  (birthYear, firstName) => {
 
 console.log(yearsUntilRetirement(1993, 'Eógan'));
 console.log(yearsUntilRetirement(1980, 'Bob'));
+
+function cutFruitPieces(fruit) {
+    return fruit * 4;
+}
+
+
+function fruitProcessor(apples, oranges) {
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+
+    const juice = `Juice with ${applePieces} piece apples and ${orangePieces} pieces orange`
+    return juice
+}
+
+console.log(fruitProcessor(2, 3));
+
+
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+    const age = calcAge(birthYear);
+    const retirement = 65 - age;
+    if (retirement > 0) {
+        console.log(`${firstName} retires in ${retirement} years`);
+        return retirement;
+    } else {
+        console.log(`${firstName} has already retired 🎉`);
+        return -1;
+
+    }
+    // return `${firstName} retires in ${retirement} years`;
+}
+
+console.log(yearsUntilRetirement(1993, 'Eógan'));
+console.log(yearsUntilRetirement(1970, 'Mike'));
+*/
+
+const friend1 = 'Micheal';
+const friend2 = 'Steven';
+const friend3 = 'Peter';
+
+const friends = ['Micheal', 'Steven', 'Peter'];
+console.log(friends);
+
+//const years = new Array(1992, 1984, 2008, 2020);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length)
+console.log(friends[friends.length - 1]);
+
+friends[2] = 'Jay';
+console.log(friends);
+
+const firstName = 'Eógan';
+const eogan = [firstName, 'Sullivan', 2037 - 1993, 'Student', friends];
+console.log(eogan);
+console.log(eogan.length);
+
+// Excercise
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
+}
+const years = [1990, 1967, 2002, 2010, 2018];
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2]), calcAge(years[3]), calcAge(years[4])];
+
+console.log(ages);
