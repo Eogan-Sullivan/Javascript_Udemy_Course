@@ -209,7 +209,7 @@ console.log(eogan);
 //"Jonas has 3 friends, and his best friend is called Micheal"
 
 console.log(`${eogan.firstName} has ${eogan.friends.length} friends and his best friend is called ${eogan.friends[0]}`);
-*/
+
 
 const eogan = {
     firstName: 'Eógan',
@@ -239,3 +239,20 @@ eogan.getSummary();
 console.log(eogan.summary);
 // console.log(eogan['calcAge'](1993));
 
+
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repition ${rep} 🏋️‍♂️`);
+}
+*/
+
+const eoganArray = [
+    'Eogan',
+    'Sullivan',
+    2037 - 1993,
+    'student',
+    ['Micheal', 'Peter', 'Steven']
+];
+
+for (let i = 0; ; i++) {
+    console.log(eoganArray[i]);
+}
