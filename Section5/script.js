@@ -49,7 +49,7 @@ document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
   if (score > 1) {
-    //When there is no input
+    //When there is no input =
     if (!guess) {
       displayMessage('No Number ⛔');
 
