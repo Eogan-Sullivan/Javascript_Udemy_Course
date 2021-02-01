@@ -32,7 +32,6 @@ function calcAge(birthYear) {
 
 const firstName = 'Eogan';
 calcAge(1993);
-*/
 
 //hoisting with variables
 console.log(me);
@@ -73,3 +72,37 @@ const z = 3;
 console.log(x === window.x);
 console.log(x === window.y);
 console.log(x === window.z);
+*/
+
+console.log(this);
+const calcAge = function (birthYear) {
+  console.log(2037 - birthYear);
+  console.log(this);
+};
+calcAge(1993);
+
+const calcAgeArrow = birthYear => {
+  console.log(2037 - birthYear);
+  console.log(this);
+};
+calcAgeArrow(1993);
+
+const eogan = {
+  year: 1993,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+};
+
+eogan.calcAge();
+
+const gillian = {
+  year: 2017,
+};
+
+gillian.calcAge = eogan.calcAge;
+gillian.calcAge();
+
+const f = eogan.calcAge;
+f();
