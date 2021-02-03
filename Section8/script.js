@@ -106,7 +106,7 @@ gillian.calcAge();
 
 const f = eogan.calcAge;
 f();
-*/
+
 //var firstName = 'Matilda';
 const eogan = {
   firstName: 'Eógan',
@@ -154,3 +154,60 @@ var addArrow = (a, b) => {
 };
 
 addArrow(2, 5, 8);
+
+let age = 30;
+let oldAge = age;
+age = 31;
+console.log(age);
+console.log(oldAge);
+
+const me = {
+  name: 'Eógan',
+  age: 27,
+};
+
+const friend = me;
+friend.age = 30;
+
+console.log(friend);
+console.log(me);
+*/
+//Primative Types
+let lastName = 'Williams';
+let oldLastName = lastName;
+lastName = 'Davis';
+console.log(lastName, oldLastName);
+//Reference Types
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis';
+
+console.log('Before Marriage:', jessica);
+console.log('After Marriage:', marriedJessica);
+
+//marriedJessica  = {};
+//Copying Objects
+const jessica2 = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+  family: ['Alice', 'Bob'],
+};
+
+//Creates Shallow Copy inner objects not copied still reference
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = 'Davis';
+
+console.log('Before Marriage:', jessica2);
+console.log('After Marriage:', jessicaCopy);
+
+jessicaCopy.family.push('Mary');
+jessicaCopy.family.push('John');
+
+console.log('Before Marriage:', jessica2);
+console.log('After Marriage:', jessicaCopy);
