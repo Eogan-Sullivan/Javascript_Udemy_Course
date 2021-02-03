@@ -72,7 +72,7 @@ const z = 3;
 console.log(x === window.x);
 console.log(x === window.y);
 console.log(x === window.z);
-*/
+
 
 console.log(this);
 const calcAge = function (birthYear) {
@@ -106,3 +106,51 @@ gillian.calcAge();
 
 const f = eogan.calcAge;
 f();
+*/
+//var firstName = 'Matilda';
+const eogan = {
+  firstName: 'Eógan',
+  year: 1993,
+  calcAge: function () {
+    //console.log(this);
+    console.log(2037 - this.year);
+
+    //pre es6
+    // const self = this; // self or that passes this to sub functions
+    // const isMillenial = function () {
+    //   console.log(self);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    // };
+    // isMillenial();
+
+    // Solution 2 es6+ this inherited from parent scope within arrow function
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
+  },
+  //greet is part of window object
+  greet: () => {
+    console.log(this);
+    console.log(`Hey ${this.firstName}`);
+  },
+};
+eogan.greet();
+eogan.calcAge();
+
+//arguments keywords only exists in functions not arrow
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+
+addExpr(2, 5);
+addExpr(2, 5, 8, 13);
+
+var addArrow = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+
+addArrow(2, 5, 8);
