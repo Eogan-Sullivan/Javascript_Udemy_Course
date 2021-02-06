@@ -47,6 +47,37 @@ const restaurant = {
   },
 };
 
+console.log('-----OR-----');
+// Use ANY data type, return ANY Data Type, short circuiting
+//if the first operand is truthy it will return it
+console.log(3 || 'Eógan');
+console.log('' || 'Eógan');
+console.log(true || 0);
+console.log(undefined || null);
+
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+//Will not work when numGuests = 0, wil return 10 even if there are actually 0 guests
+restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+console.log('-----AND-----');
+//if the first operand is falsey it will return it
+console.log(0 && 'Eógan');
+console.log(7 && 'Eógan');
+
+console.log('Hello' && 23 && null && 'Eógan' && 0);
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+/*
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
 //Destructuring
