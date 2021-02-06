@@ -47,6 +47,14 @@ const restaurant = {
   },
 };
 
+const guests = restaurant.numGuests || 10;
+console.log(guests);
+
+//Nullish: null and undefined (Not 0 or '')
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
+
+/*Array
 console.log('-----OR-----');
 // Use ANY data type, return ANY Data Type, short circuiting
 //if the first operand is truthy it will return it
