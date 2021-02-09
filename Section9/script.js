@@ -56,8 +56,65 @@ const restaurant = {
 };
 
 const airline = 'TAP Air Portugal';
-const plane = 'A320';
 
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+const passanger = 'EóGaN';
+const passangerLower = passanger.toLowerCase();
+const passangerProper =
+  passangerLower[0].toUpperCase() + passangerLower.slice(1);
+console.log(passangerProper);
+
+// Comparing email
+const email = 'hello@eogan.io';
+const loginEmail = '  Hello@Eogan.Io \n';
+
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+
+const normalisedEmail = loginEmail.toLowerCase().trim();
+console.log(normalisedEmail);
+console.log(normalisedEmail === email);
+
+//replacing
+const priceGB = '£288,97';
+const priceUS = priceGB.replace('£', '$').replace(',', '.');
+console.log(priceUS);
+
+const announcement =
+  'All passangers come to boarding door 23. Boarding door 23';
+
+console.log(announcement.replaceAll('door', 'gate'));
+//This doesnt work for Jonas he uses Regular Expression in video (see below)
+
+console.log(announcement.replace(/door/g, 'gate'));
+
+//Booleans includes, startsWith, endsWith
+const plane = 'Airbus A320neo';
+console.log(plane.includes('A320'));
+console.log(plane.includes('Boeing'));
+console.log(plane.startsWith('Airb'));
+
+if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+  console.log('Part of the new Airbus Family');
+}
+
+//Practice Excercise
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('You are NOT allowed on board');
+  } else {
+    console.log('Welcome Aboard');
+  }
+};
+
+checkBaggage('I have a laptop, some food and a pocket Knife');
+checkBaggage('Socks and camera');
+checkBaggage('Got some snacks and a gun for protection');
+/*
+const plane = 'A320';
 console.log(plane[0]);
 console.log(plane[1]);
 console.log(plane[2]);
