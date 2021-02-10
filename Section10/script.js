@@ -53,7 +53,7 @@ const newPassport = function (person) {
 
 newPassport(eogan);
 checkIn(flight, eogan);
-*/
+
 const oneWord = function (str) {
   return str.replace(/ /g, '').toLowerCase();
 };
@@ -81,3 +81,21 @@ const high5 = function () {
 document.body.addEventListener('click', high5);
 
 ['Eogan', 'Martha', 'Adam'].forEach(high5);
+*/
+
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+const greeterHey = greet('Hey');
+
+greeterHey('Eogan');
+greeterHey('Stephen');
+
+greet('Hello')('Eogan2');
+
+const greetArr = greeting => name => console.log(`${greeting} ${name}`);
+
+greetArr('Hi')('Eógan');
