@@ -259,3 +259,14 @@ document
 poll.displayResults.call({ answers: [5, 2, 3] }, 'string');
 poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, 'string');
 */
+const runOnce = function () {
+  console.log('This will never run again');
+};
+runOnce();
+
+// Immediately invoked function expressions
+(function () {
+  console.log('This will never run again');
+})();
+
+(() => console.log('This will ALSO never run again'))();
