@@ -184,7 +184,7 @@ const checkDogs = function (dogsJulia, dogsKate) {
 };
 
 checkDogs([2, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
-*/
+
 const eurToUsd = 1.1;
 // const movementsUSD = movements.map(function (mov) {
 //   return mov * eurToUsd;
@@ -206,3 +206,17 @@ const movementsDescriptions = movements.map(
     } ${Math.abs(mov)}`
 );
 console.log(movementsDescriptions);
+*/
+const deposits = movements.filter(function (mov) {
+  return mov > 0;
+});
+console.log(movements);
+console.log(deposits);
+
+const depositsFor = [];
+for (const mov of movements) if (mov > 0) depositsFor.push(mov);
+console.log(depositsFor);
+
+const withdrawals = movements.filter(mov => mov < 0);
+
+console.log(withdrawals);
