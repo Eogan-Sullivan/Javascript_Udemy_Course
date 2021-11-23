@@ -121,6 +121,12 @@ get fullName(){
     return this._fullName;
 }
 
+//static method
+static hey(){
+    console.log('Hey there');
+    console.log(this);
+}
+
 }
 
 const jessica = new PersonCl('Jessica Davis', 1996);
@@ -156,5 +162,5 @@ account.latest = 50;
 console.log(account.movements);
 
 const walter = new PersonCl('Walter White',1965);
- console.log(walter);
+
 
