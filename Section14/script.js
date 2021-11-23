@@ -43,3 +43,51 @@ Person.prototype.species = 'Homo Sapiens';
 console.log(jonas.species, matilda.species);
 
 console.log(jonas.hasOwnProperty('species'));
+
+//Object.prototype top of the prototype chain
+console.log(jonas.__proto__.__proto__);
+console.log(jonas.__proto__.__proto__);
+
+console.dir(Person.prototype.constructor);
+
+const arr = [3,4,5,6,7,9,3]; // new Array === []
+console.log(arr.__proto__);
+console.log(arr.__proto__ === new Array);
+
+console.log(arr.__proto__.__proto__);
+
+Array.prototype.unique = function(){
+    return [...new Set(this)];
+}
+
+console.log(arr.unique());
+
+const h1 = document.querySelector('h1');
+
+console.dir(h1);
+
+console.dir(x => x+1);
+
+// coding challenge
+const Car = function(make,speed){
+    this.make = make;
+    this.speed = speed;
+}
+
+Car.prototype.accelerate = function(){
+    this.speed += 10;
+    console.log(this.speed);
+}
+
+Car.prototype.brake = function(){
+    this.speed -= 5;
+    console.log(this.speed);
+}
+
+const bmw = new Car('BMW', 120);
+const merc = new Car('Mercedes', 95);
+
+bmw.accelerate();
+merc.accelerate()
+bmw.brake();
+merc.brake();
