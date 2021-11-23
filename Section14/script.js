@@ -241,7 +241,6 @@ mike.calcAge();
 
 Student.prototype.constructor = Student;
 console.log(mike.__proto__);
-*/
 
 const Car = function (make, speed) {
   this.make = make;
@@ -282,3 +281,61 @@ tesla.chargeBattery(90);
 console.log(tesla);
 tesla.brake();
 tesla.accelerate();
+*/
+class PersonCl {
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
+    this.birthYear = birthYear;
+  }
+
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  }
+
+  get age() {
+    return 2037 - this.birthYear;
+  }
+
+  // set a property that already exisits (this._)
+  set fullName(name) {
+    if (name.includes(" ")) this._fullName = name;
+    else alert: `${name} is not a fullname`;
+  }
+
+  get fullName() {
+    return this._fullName;
+  }
+
+  //static method
+  static hey() {
+    console.log("Hey there");
+    console.log(this);
+  }
+}
+
+class StudentCl extends PersonCl {
+  constructor(fullName, birthYear, course) {
+    //always happens first
+    super(fullName, birthYear);
+    this.course = course;
+  }
+
+  introduce() {
+    console.log(`My name is ${this.fullName} and I study ${this.course}`);
+  }
+
+  calcAge() {
+    console.log(
+      `I'm ${
+        2037 - this.birthYear
+      } years old but as a student I feel more like ${
+        2037 - this.birthYear + 10
+      }`
+    );
+  }
+}
+
+const martha = new StudentCl("Martha Jones", 2012, "Computer Science");
+
+martha.introduce();
+martha.calcAge();
