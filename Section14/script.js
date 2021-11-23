@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 const Person = function (firstName, birthYear){
  this.firstName = firstName;
  this.birthYear = birthYear;
@@ -91,3 +91,34 @@ bmw.accelerate();
 merc.accelerate()
 bmw.brake();
 merc.brake();
+*/
+
+//class expression
+//const Personcl = class{}
+
+//class declaration
+class PersonCl{
+constructor(firstName, birthYear){
+this.firstName = firstName;
+this.birthYear = birthYear;
+}
+
+calcAge(){
+    console.log(2037 -this.birthYear);
+}
+}
+
+const jessica = new PersonCl('Jessica', 1996);
+console.log(jessica)
+jessica.calcAge();
+
+PersonCl.prototype.greet = function(){
+    console.log(`Hey ${this.firstName}`);
+}
+
+jessica.greet();
+
+// Classes are not hoisted/
+// Classes are firstclass citizens
+// Classes are executed in strict mode
+
